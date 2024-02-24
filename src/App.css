@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+.butto, .buttoEqual, .buttoC{
+  width: 60px;
+  height: 60px;
+  margin: 2px;
+  /* margin-top: ; */
+  border: 2px solid black;
+  font-size: xx-large;
+  background-color: bisque;
+
+}
+.inpu {
+  width: 250px;
+  height: 40px;
+  border: 2px solid black;
+  font-size: xx-large;
+  margin-bottom: 10px;
+  background-color: bisque;
+
+}
