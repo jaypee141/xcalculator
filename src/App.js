@@ -5,16 +5,16 @@ import React, { useState } from "react";
 function App() {
   const[number1, getNumber] = useState('');
   const [output, setOutput] = useState(0);
-  const [stat, setStat] =useState(false);
+  // const [stat, setStat] =useState(false);
   
   const clickHandle = (e) => {
-    setStat(false);
+    // setStat(false);
     getNumber(number1 + e.target.value);
 
   }
   console.log("hiiiiiiii", number1);
   const clickHandleEqual = () => {
-    setStat(true)
+    // setStat(true)
     // console.log("njjnnn", parseFloat(number1))
     if(number1){
     setOutput(eval(number1).toString());
@@ -29,8 +29,8 @@ function App() {
   return (
     <div className="App">
       <h1>React Calculator</h1>
-      <input type="text" value={stat ? output : number1} className='inpu'></input>
-      {/* <h1>{output}</h1> */}
+      <input type="text" value={number1} className='inpu'></input>
+      <h1>{output}</h1>
       <br/>
       <input type="button" value="7" className='butto' onClick={clickHandle} />
       <input type="button" value="8" className='butto'onClick={clickHandle} />
