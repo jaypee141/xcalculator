@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 function App() {
   const[number1, getNumber] = useState('');
-  const [output, setOutput] = useState(0);
+  const [output, setOutput] = useState(null);
   // const [stat, setStat] =useState(false);
   
   const clickHandle = (e) => {
@@ -22,6 +22,12 @@ function App() {
       setOutput("Error");
     }
   }
+
+  const callData = (() =>{
+    setOutput(null);
+    getNumber(' ');  
+  }
+  )
    
  
 
@@ -30,7 +36,7 @@ function App() {
     <div className="App">
       <h1>React Calculator</h1>
       <input type="text" value={number1} className='inpu'></input>
-      <h1>{output}</h1>
+      <h1 style={{display: "block"}}>{output}</h1>
       <br/>
       <input type="button" value="7" className='butto' onClick={clickHandle} />
       <input type="button" value="8" className='butto'onClick={clickHandle} />
@@ -47,7 +53,7 @@ function App() {
       <input type="button" value="3" className='butto' onClick={clickHandle} />
       <input type="button" value="*" className='butto' onClick={clickHandle} />
       <br/>
-      <input type="button" value="C" className='buttoC' onClick={() => getNumber('')} />
+      <input type="button" value="C" className='buttoC' onClick={callData} />
       <input type="button" value="0" className='butto' onClick={clickHandle} />
       <input type="button" value="=" className='buttoEqual' onClick={clickHandleEqual} />
       <input type="button" value="/" className='butto' onClick={clickHandle} />
