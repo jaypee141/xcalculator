@@ -23,7 +23,7 @@ function App() {
       setOutput("Error");
     }
   };
-  const clearData = () => {
+  const handleClear = () => {
     setOutput(null);
     setNumber('');
   };
@@ -32,30 +32,112 @@ function App() {
     <div className="App">
       <h1>React Calculator</h1>
       {/* Updated class name here */}
-      <input type="text" value={number1} className='input' />
-      <h1 style={{ display: "block" }}>{output}</h1>
-      <br />
-      {/* Updated class names here */}
-      <input type="button" value="7" className='button' onClick={clickHandle} />
-      <input type="button" value="8" className='button' onClick={clickHandle} />
-      <input type="button" value="9" className='button' onClick={clickHandle} />
-      <input type="button" value="+" className='button' onClick={clickHandle} />
-      <br />
-      <input type="button" value="4" className='button' onClick={clickHandle} />
-      <input type="button" value="5" className='button' onClick={clickHandle} />
-      <input type="button" value="6" className='button' onClick={clickHandle} />
-      <input type="button" value="-" className='button' onClick={clickHandle} />
-      <br />
-      <input type="button" value="1" className='button' onClick={clickHandle} />
-      <input type="button" value="2" className='button' onClick={clickHandle} />
-      <input type="button" value="3" className='button' onClick={clickHandle} />
-      <input type="button" value="*" className='button' onClick={clickHandle} />
-      <br />
-      <input type="button" value="C" className='buttonC' onClick={clearData} />
-      <input type="button" value="0" className='button' onClick={clickHandle} />
-      {/* Updated class name here */}
-      <input type="button" value="=" className='buttonEqual' onClick={clickHandleEqual} />
-      <input type="button" value="/" className='button' onClick={clickHandle} />
+      {/* <h1 style={{ display: "block" }}>{output}</h1> */}
+      <div>
+        {/* <input type="text" value={input} className="calculator-input" /> */}
+        <input type="text" value={number1} className='input' />
+
+        <p>{output}</p>
+        <div >
+          <button
+            type="button"
+            className="btns"
+            value="7"
+            // className="but"
+            onClick={clickHandle}
+          >7</button>
+          <button
+            type="button"
+            className="btns"
+            value="8"
+            onClick={clickHandle}
+          >8</button>
+          <button
+            type="button"
+            className="btns"
+            value="9"
+            onClick={clickHandle}
+          >9</button>
+          <button
+            type="button"
+            className="btns"
+            value="+"
+            onClick={clickHandle}
+          >+</button> <br/>
+          <button
+            type="button"
+            className="btns"
+            value="4"
+            onClick={clickHandle}
+          >4</button>
+          <button
+            type="button"
+            className="btns"
+            value="5"
+            onClick={clickHandle}
+          >5</button>
+          <button
+            type="button"
+            className="btns"
+            value="6"
+            onClick={clickHandle}
+          >6</button>
+          <button
+            type="button"
+            className="btns"
+            value="-"
+            onClick={clickHandle}
+          >-</button><br/>
+          <button
+            type="button"
+            className="btns"
+            value="1"
+            onClick={clickHandle}
+          >1</button>
+          <button
+            type="button"
+            className="btns"
+            value="2"
+            onClick={clickHandle}
+          >2</button>
+          <button
+            type="button"
+            className="btns"
+            value="3"
+            onClick={clickHandle}
+          >3</button>
+          <button
+            type="button"
+            className="btns"
+            value="*"
+            onClick={clickHandle}
+          >*</button><br />
+          <button
+            type="button"
+            className="btns"
+            value="C"
+            onClick={handleClear}
+          >C</button>
+          <button
+            type="button"
+            className="btns"
+            value="0"
+            onClick={clickHandle}
+          >0</button>
+          <button
+            type="button"
+            className="btns"
+            value="="
+            onClick={clickHandleEqual}
+          >=</button>
+          <button
+            type="button"
+            className="btns"
+            value="/"
+            onClick={clickHandle}
+          >/</button>
+      </div>
+    </div>
     </div>
   );
 }
