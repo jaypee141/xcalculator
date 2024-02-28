@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from "react";
+import * as math from "mathjs";
 
 function App() {
   const [number1, setNumber] = useState('');
@@ -12,12 +13,16 @@ function App() {
 
   const clickHandleEqual = () => {
     if (number1) {
-      setOutput(eval(number1).toString());
+      try {
+        const result = math.evaluate(number1);
+        setOutput(result.toString());
+      } catch (error) {
+        setOutput("Error");
+      }
     } else {
       setOutput("Error");
     }
   };
-
   const clearData = () => {
     setOutput(null);
     setNumber('');
