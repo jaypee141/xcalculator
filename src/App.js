@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <h1>React Calculator</h1>
       {/* Updated class name here */}
-      <input type="text" value={number1} className='input' readOnly />
+      <input type="text" value={number1} className='input' />
       <h1 style={{ display: "block" }}>{output}</h1>
       <br />
       {/* Updated class names here */}
