@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-.butto, .buttoEqual, .buttoC{
+.button, .buttonEqual, .buttonC{
   width: 60px;
   height: 60px;
   margin: 2px;
@@ -12,7 +12,7 @@
   /* position: fixed; */
   /* top: 200px; */
 }
-.inpu {
+.input {
   width: 250px;
   height: 40px;
   border: 2px solid black;
